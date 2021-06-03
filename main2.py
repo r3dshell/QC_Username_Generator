@@ -2,7 +2,7 @@
 
 import argparse
 
-parser = argparse.ArgumentParser(description='A username and wordlist generator for Quebec specific users 2.0.')
+parser = argparse.ArgumentParser(description='A username and wordlist generator for Quebec and French Canadian users.')
 group = parser.add_mutually_exclusive_group(required=True)
 group.add_argument('-u', '--username', action='store_true', help='Generate a user list')
 group.add_argument('-w', '--wordlist', action='store_true', help='Generate a password list')
@@ -24,11 +24,10 @@ fnames = f_file.read()
 bnames = fnames + mnames
 
 email = ""
-begin_year = 1900 ##update me in need
-end_year = 2023 ##update me in need
+begin_year = 1900 ##update if needed
+end_year = 2023 ##update if needed
 
 print("")
-print(args)
 a = open("banner.txt","r")
 print(a.read())
 a.close()
@@ -146,28 +145,28 @@ def print_wordlist(format):
 
 if args.username:
     print("")
-    print("Example: John Doe")
-    print("[1] Firstname : John")
-    print("[2] Lastname : Doe")
-    print("[3] Firstname.Lastname : John.Doe")
-    print("[4] Firstname_Lastname : John_doe")
-    print("[5] FLastname : JDoe")
-    print("[6] LastnameF : DoeJ")
-    print("[7] FirstnameL : JohnD")
-    print("[8] LFirstname : DJohn")
-    print("[9] FirstnameLastName : JohnDoe")
-    print("[10] LastnameFirstname : DoeJohn")
+    print("Example: Jean Tremblay")
+    print("[1] Firstname : jean")
+    print("[2] Lastname : tremblay")
+    print("[3] Firstname.Lastname : jean.tremblay")
+    print("[4] Firstname_Lastname : jean_tremblay")
+    print("[5] FLastname : jtremblay")
+    print("[6] LastnameF : tremblayj")
+    print("[7] FirstnameL : jeant")
+    print("[8] LFirstname : tjean")
+    print("[9] FirstnameLastName : jeantremblay")
+    print("[10] LastnameFirstname : tremblayjean")
     format = int(input("[*] Select the format for the username generation: "))
     print("")
     data = print_names(format)
 
 if args.wordlist:
     print("")
-    print("Example: John Doe")
-    print("[1] firstname+Year : john1970") #
-    print("[2] lastname+Year : doe1970")
-    print("[3] Firstname+Year : John1970")
-    print("[4] Lastname+Year : Doe1970")
+    print("Example: Jean Tremblay")
+    print("[1] firstname+Year : jean1970") #
+    print("[2] lastname+Year : tremblay1970")
+    print("[3] Firstname+Year : Jean1970")
+    print("[4] Lastname+Year : Tremblay1970")
     format = int(input("[*] Select the format for the password list generation :"))
     print("")
     data = print_wordlist(format)    
