@@ -28,35 +28,32 @@ The following patterns are supported for passwords:
 
 A few examples:
 
-To generate an email username list, using both male and female first names:
+To generate an email username list:
 ```
-python3 main.py --username --both --domain --output example
-```
-
-To generate a username list, using both male and female first names:
-```
-python3 main.py --username --both --output example
+python3 main.py -u -d -o output_file
 ```
 
-To generate a password list, using male first names:
+To generate a username lis:
 ```
-python3 main.py -wmo example
+python3 main.py -u -o output_file
+```
+
+To generate a password list:
+```
+python3 main.py -w -o output_file
 ```
 ---
 ## Help
 
 ```
-usage: main.py [-h] (-u | -w) (-m | -f | -b) [-d] -o OUTPUT
+usage: main.py [-h] (-u | -w) [-d] [-o OUTPUT]
 
-A username and wordlist generator for Quebec specific users.
+A username and wordlist generator for Quebec and French Canadian users.
 
 optional arguments:
   -h, --help            show this help message and exit
   -u, --username        Generate a user list
   -w, --wordlist        Generate a password list
-  -m, --male            Include only male first names
-  -f, --female          Include only female first names
-  -b, --both            Include both male and female first names
   -d, --domain          Generate a username list as emails
   -o OUTPUT, --output OUTPUT
                         Output file name (do not include extensions or path)
