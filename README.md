@@ -2,7 +2,9 @@
 
 ## What
 
-This script is used to generate a username list using the most common first and last names in Quebec in different formats. It can also generate some passwords using specific patterns such as Tremblay2020.
+This script is used to generate a username list using the most common first and last names in Quebec in different formats. It can generate some passwords using specific patterns such as Tremblay2020.
+
+It can also generate personas using a defined number of random French Canadian names.
 
 The following patterns are supported for usernames:
 * first
@@ -23,7 +25,7 @@ The following patterns are supported for passwords:
 * First+year (capital first letter)
 * Last+year (capital first letter)
 
-Persona generation feature will generate a defined number of random French Canadian names.
+
 
 ---
 ## How it works
