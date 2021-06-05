@@ -160,7 +160,7 @@ def print_persona(format):
     else:
         firstN = bnames
     for i in range(format):
-        res.append(random.choice(firstN.splitlines()).lower().capitalize()+" "+random.choice(lnames.splitlines()).lower().capitalize())
+        res.append(random.choice(firstN.splitlines()).lower().capitalize().title()+" "+random.choice(lnames.splitlines()).lower().capitalize().title())
     return res
 
 if args.persona:
