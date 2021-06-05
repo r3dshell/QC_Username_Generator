@@ -23,6 +23,8 @@ The following patterns are supported for passwords:
 * First+year (capital first letter)
 * Last+year (capital first letter)
 
+Persona generation feature will generate a defined number of random French Canadian names.
+
 ---
 ## How it works
 
@@ -42,11 +44,17 @@ To generate a password list:
 ```
 python3 main.py -w -o output_file
 ```
+
+To generate random personas:
+```
+python3 main.py -p -o output_file
+```
+
 ---
 ## Help
 
 ```
-usage: main.py [-h] (-u | -w) [-d] [-o OUTPUT]
+usage: main.py [-h] (-u | -w | -p) [-d] [-o OUTPUT]
 
 A username and wordlist generator for Quebec and French Canadian users.
 
@@ -54,6 +62,7 @@ optional arguments:
   -h, --help            show this help message and exit
   -u, --username        Generate a user list
   -w, --wordlist        Generate a password list
+  -p, --persona         Generate a list of persona from random names
   -d, --domain          Generate a username list as emails
   -o OUTPUT, --output OUTPUT
                         Output file name (do not include extensions or path)
@@ -65,6 +74,17 @@ optional arguments:
 First names are coming from prenomsquebec.ca from the most popular first names from 1980 to 2020.
 
 Last names are from the *most common family names from Québec* [wikipedia article](https://fr.wikipedia.org/wiki/Liste_des_noms_de_famille_les_plus_courants_au_Qu%C3%A9bec)
+
+
+---
+## Changelog
+
+June 5, 2021
+- Added persona generation
+- Bug fixes
+
+June 2, 2021
+- Initial release
 
 ---
 ### DISCLAIMER
